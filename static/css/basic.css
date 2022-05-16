@@ -1,0 +1,14 @@
+:root {
+    --background-header-color: rgba(33, 99, 13, 0.25);
+    --background-nav-color: #ffffff;
+    --background-color: #ffffff;
+    --dark-green: #162615;
+    --border: rgb(183, 68, 0, 0.3);
+    --faded-black: #252525;
+    --links: #850000;
+    --titles: #915127;
+    --hover: rgb(183, 68, 0, 0.1);
+    --misc: #E3CCA5;
+    --line-decoration: rgb(36, 35, 35, 0.25);
+    --raleway: "Raleway", sans-serif;
+}

@@ -1,0 +1,18 @@
+.header {
+    background-color: var(--background-header-color);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__title {
+    text-align: center;
+    font-size: 24px;
+}
+
+.header__menu,
+.header__busca {
+    font-size: 24px;
+    cursor: pointer
+}

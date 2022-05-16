@@ -1,0 +1,107 @@
+    .side__nav {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--background-nav-color);
+        /* width: 55vw; */
+        height: 100vh;
+        /* position: absolute;
+        left: -100vw; */
+        position: fixed;
+        width: 55vw;
+        top: 0;
+        left: 0;
+        transform: translateX(-55vw);
+        /* display: none; */
+        transition: transform 0.5s;
+        /* border-right: 2px solid var(--border); */
+    }
+    
+    .nav__open .side__nav {
+        transform: translateX(0);
+    }
+    
+    .nav__open .main,
+    .nav__open .header {
+        transform: translateX(55vw);
+    }
+    
+    .main,
+    .header {
+        transition: transform 0.5s;
+    }
+    
+    .nav__close {
+        background: none;
+        border: none;
+        display: flex;
+        align-items: center;
+    }
+    
+    .side__nav--ativo {
+        left: 0;
+        /* display: block; */
+        transition: 0.5s;
+        /* box-shadow: 4px 4px 5px var(--shadow);
+        border-top: 0.1rem solid var(--black); */
+    }
+    
+    .side__nav-link {
+        height: 3rem;
+        padding: 0 0 0 1.5rem;
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        cursor: pointer;
+        border-top: 2px solid var(--border);
+        /* margin-bottom: 1px; */
+    }
+    
+    .doces__list a,
+    .salgados__list a {
+        padding: 0.3rem 0 0.3rem 1.5rem;
+        cursor: pointer;
+    }
+    
+    .doces__list,
+    .salgados__list {
+        /* position: absolute; */
+        /* top: -100vh; */
+        /* overflow: hidden; */
+        /* transition: all 1s ease-in-out; */
+        /* visibility: hidden; */
+        transform-origin: top;
+        transition: height 1s ease;
+        height: 0;
+        /* opacity: 0; */
+        transform: scaleY(0);
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .a--ativo {
+        /* visibility: visible; */
+        transform: scaleY(1);
+        /* transition: 0.5s; */
+        /* max-height: 250px; */
+        height: auto;
+        transition: height 1s ease;
+        /* opacity: 1; */
+    }
+    
+    @media screen and (min-width:480px) {
+        .side__nav-link:hover {
+            background-color: var(--hover)
+        }
+        .doces__list a:hover,
+        .salgados__list a:hover {
+            text-decoration: underline;
+        }
+        .side__nav {
+            width: 30vw;
+            transform: translateX(-30vw);
+        }
+        .nav__open .main,
+        .nav__open .header {
+            transform: translateX(30vw);
+        }
+    }
