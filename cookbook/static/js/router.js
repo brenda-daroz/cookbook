@@ -8,9 +8,9 @@ export const navigateTo = url => {
 };
 
 const routes = [
-    { path: /^\/$/, view: () => renderHome() },
+    { path: /^\/cookbook$/, view: () => renderHome() },
     {
-        path: new RegExp('/receitas/(?<nameOfTheRecipe>.*)'), view: (params) => {
+        path: new RegExp('/cookbook/receitas/(?<nameOfTheRecipe>.*)'), view: (params) => {
             const recipe = getRecipe(allRecipes, params.nameOfTheRecipe);
             const component = recipeComponent(recipe);
             renderRecipe(component);
@@ -18,16 +18,21 @@ const routes = [
     },
 ];
 export const resolveRoute = async () => {
-    const routeMatch = routes.slice(0).reduce((_acc, route, _i, arr) => {
-        const match = location.pathname.match(route.path);
+    const currentPath = location.pathname.replace(/\/$/, "")
+    const routeMatch = routes.slice(0).reduce((acc, route, _i, arr) => {
+        const match = currentPath.match(route.path);
         const isMatch = match !== null;
-        if (isMatch) { arr.splice(1); }
-        return {
-            route,
-            isMatch,
-            params: match?.groups
-        };
-    }, null);
+        if (isMatch) {
+            arr.splice(1);
+            return {
+                route,
+                isMatch,
+                params: match?.groups
+            }
+        } else {
+            return acc
+        }
+    }, null)
 
     if (routeMatch) {
         routeMatch.route.view(routeMatch.params);
