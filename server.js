@@ -4,7 +4,7 @@ const path = require("path");
 const app = express();
 
 /* Ensure any requests prefixed with /static will serve our "frontend/static" directory */
-app.use("/cookbook", express.static(path.join(__dirname, "/cookbook")));
+app.use("/cookbook/static", express.static(path.join(__dirname, "/static")));
 
 /* Redirect all routes to our (soon to exist) "index.html" file */
 app.get("/*", (req, res) => {
