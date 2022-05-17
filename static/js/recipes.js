@@ -10,7 +10,7 @@ const hummus = {
         "Sal a gosto",
     ],
     directionsList: "",
-    image: { src: 'spa/static/images/hummus.jpg' },
+    image: { src: '/cookbook/static/images/hummus.jpg' },
     routerPath: "hummus"
 }
 
@@ -24,7 +24,7 @@ const cheddarSauce = {
         "225 g macarrão"
     ],
     directionsList: "Colocar manteiga numa panela",
-    image: { src: '/static/images/cheddar.jpeg' },
+    image: { src: '/cookbook/static/images/cheddar.jpeg' },
     routerPath: "cheddar-sauce"
 
 }
@@ -37,7 +37,7 @@ const nhoqueDeBatata = {
         "Sal, pimenta do reina e noz moscada a gosto",
     ],
     directionsList: "",
-    image: { src: '/static/images/gnocchi.jpg' },
+    image: { src: '/cookbook/static/images/gnocchi.jpg' },
     routerPath: "nhoque-de-batata"
 }
 

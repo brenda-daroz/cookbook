@@ -9,9 +9,9 @@ function renderHome() {
         h('article.article__latest',
             h('h2.latest.right',
                 h('span', 'Ultimos posts')),
-            h('img.img__latest', { src: '/static/images/burger.jpeg' }),
+            h('img.img__latest', { src: '/cookbook/static/images/burger.jpeg' }),
             h('p', 'Hamburguer'),
-            h('img.img__latest', { src: '/static/images/cupcakes-5447570_1280.jpeg' }),
+            h('img.img__latest', { src: '/cookbook/static/images/cupcakes-5447570_1280.jpeg' }),
             h('p', 'Cupcake'),
         ))
 
